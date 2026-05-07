@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistem Monitoring </title>
+</head>
+<body>
+  <header>
+    <h1>Sistem Monitoring Debu pada Sistem PLTS</h1>
+    <p>Memantau suhu, kelembaban, angin, kualitas udara, dan curah hujan secara berkala.</p>
+
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#grafik">Grafik</a>
+      <a href="#riwayat">Riwayat</a>
+      <a href="#perangkat">Perangkat</a>
+    </nav>
+  </header>
+
+  <main id="dashboard">
+    <section>
+      <h2>Status Sistem</h2>
+
+      <div>
+        <p><strong>Status koneksi:</strong> Online</p>
+        <p><strong>Update terakhir:</strong> 09:00 WIB</p>
+        <p><strong>Lokasi sensor:</strong> Area Monitoring Utama</p>
+        <p><strong>Mode pemantauan:</strong> Otomatis</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Kontrol Monitoring</h2>
+
+      <form>
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal">
+
+        <label for="interval">Interval data:</label>
+        <select id="interval" name="interval">
+          <option value="5">Setiap 5 menit</option>
+          <option value="15">Setiap 15 menit</option>
+          <option value="30">Setiap 30 menit</option>
+          <option value="60">Setiap 1 jam</option>
+        </select>
+
+        <button type="button">Tampilkan Data</button>
+        <button type="button">Refresh</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Data Sensor Saat Ini</h2>
+
+      <div>
+        <article>
+          <h3>Suhu</h3>
+          <p><strong>28</strong> &deg;C</p>
+          <p>Status: Normal</p>
+          <progress value="28" max="50">28 derajat Celcius</progress>
+        </article>
+
+        <article>
+          <h3>Kelembaban</h3>
+          <p><strong>72</strong> %</p>
+          <p>Status: Lembab</p>
+          <progress value="72" max="100">72 persen</progress>
+        </article>
+
+        <article>
+          <h3>Arah Angin</h3>
+          <p><strong>Timur Laut</strong></p>
+          <p>Status: Stabil</p>
+          <p>Kompas: 45&deg;</p>
+        </article>
+
+        <article>
+          <h3>Kecepatan Angin</h3>
+          <p><strong>12</strong> km/jam</p>
+          <p>Status: Aman</p>
+          <progress value="12" max="100">12 kilometer per jam</progress>
+        </article>
+
+        <article>
+          <h3>Kualitas Udara</h3>
+          <p><strong>45</strong> AQI</p>
+          <p>Status: Baik</p>
+          <progress value="45" max="300">45 AQI</progress>
+        </article>
+
+        <article>
+          <h3>Curah Hujan</h3>
+          <p><strong>3</strong> mm</p>
+          <p>Status: Hujan Ringan</p>
+          <progress value="3" max="100">3 milimeter</progress>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ringkasan Kondisi</h2>
+      <ul>
+        <li>Suhu dan kelembaban berada dalam batas aman.</li>
+        <li>Kecepatan angin tidak menunjukkan potensi bahaya.</li>
+        <li>Kualitas udara masih dalam kategori baik.</li>
+        <li>Curah hujan terdeteksi ringan.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Peringatan</h2>
+
+      <div>
+        <article>
+          <h3>Aman</h3>
+          <p>Tidak ada peringatan bahaya saat ini.</p>
+        </article>
+
+        <article>
+          <h3>Batas Peringatan</h3>
+          <ul>
+            <li>Suhu tinggi: di atas 35 &deg;C</li>
+            <li>Kualitas udara buruk: AQI di atas 100</li>
+            <li>Angin kencang: di atas 40 km/jam</li>
+            <li>Curah hujan tinggi: di atas 50 mm</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="grafik">
+      <h2>Grafik Monitoring</h2>
+
+      <figure>
+        <figcaption>Grafik suhu dan kelembaban harian</figcaption>
+        <div>
+          <p>Area grafik suhu dan kelembaban</p>
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Grafik kualitas udara dan curah hujan</figcaption>
+        <div>
+          <p>Area grafik kualitas udara dan curah hujan</p>
+        </div>
+      </figure>
+    </section>
+
+    <section id="riwayat">
+      <h2>Riwayat Monitoring</h2>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Waktu</th>
+            <th>Suhu</th>
+            <th>Kelembaban</th>
+            <th>Angin</th>
+            <th>AQI</th>
+            <th>Curah Hujan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00</td>
+            <td>27 &deg;C</td>
+            <td>70%</td>
+            <td>10 km/jam</td>
+            <td>42</td>
+            <td>0 mm</td>
+          </tr>
+          <tr>
+            <td>09:00</td>
+            <td>28 &deg;C</td>
+            <td>72%</td>
+            <td>12 km/jam</td>
+            <td>45</td>
+            <td>3 mm</td>
+          </tr>
+          <tr>
+            <td>10:00</td>
+            <td>29 &deg;C</td>
+            <td>74%</td>
+            <td>14 km/jam</td>
+            <td>48</td>
+            <td>5 mm</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="perangkat">
+      <h2>Informasi Perangkat</h2>
+
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Perangkat</th>
+            <th>Fungsi</th>
+            <th>Status</th>
+            <th>Baterai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sensor DHT22</td>
+            <td>Membaca suhu dan kelembaban</td>
+            <td>Aktif</td>
+            <td>90%</td>
+          </tr>
+          <tr>
+            <td>Anemometer</td>
+            <td>Membaca arah dan kecepatan angin</td>
+            <td>Aktif</td>
+            <td>85%</td>
+          </tr>
+          <tr>
+            <td>Sensor Debu</td>
+            <td>Membaca kualitas udara</td>
+            <td>Aktif</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Rain Gauge</td>
+            <td>Membaca curah hujan</td>
+            <td>Aktif</td>
+            <td>92%</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside>
+      <h2>Catatan Operator</h2>
+      <textarea rows="5" cols="50" placeholder="Tulis catatan monitoring di sini..."></textarea>
+      <br>
+      <button type="button">Simpan Catatan</button>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sistem Monitoring Lingkungan</p>
+  </footer>
+</body>
+</html>
